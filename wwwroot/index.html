@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="vitals.apps.doctor-finder" ng-controller="AppController as appCtrl">
+<head>
+    <meta charset="utf-8">
+    <title ng-bind="appCtrl.getPageTitle()"></title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/styles.min.css">
+</head>
+<body>
+
+<div id="shell">
+
+    <h1>Doctor Finder</h1>
+
+    <div id="map" ng-controller="MapController as mapCtrl"></div>
+
+    <ul class="doctor-list" ng-controller="DoctorListController as doctorListCtrl" ng-cloak>
+        <li class="doctor-item"
+            ng-class="{'selected':doctorListCtrl.isSelected(doctor)}"
+            ng-repeat="doctor in doctorListCtrl.doctors()"
+            ng-click="doctorListCtrl.select(doctor)">
+            <div class="doctor-pic"><img src="images/default-user.png" alt="User Profile"></div>
+            <div class="doctor-details">
+                <strong>{{doctor.name}}</strong><br/>
+                <small>{{doctor.locations[0].address.addr_line1}}</small> <br/>
+                <small>{{doctor.locations[0].address.city}}, {{doctor.locations[0].address.state_code}} {{doctor.locations[0].address.postal_code}}</small>
+            </div>
+        </li>
+    </ul>
+
+    <div class="footer">
+        Groovy footer.
+    </div>
+
+</div>
+
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+<script src="js/vendor.min.js"></script>
+<script src="js/vitals.components.min.js"></script>
+<script src="js/vitals.apps.doctor-finder.min.js"></script>
+
+</body>
+</html>

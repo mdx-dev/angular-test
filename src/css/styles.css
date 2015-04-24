@@ -1,0 +1,74 @@
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lato', Helvetica, sans-serif;
+  font-weight: 300;
+  color: #000; }
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0; }
+
+img {
+  max-width: 100%; }
+
+#shell {
+  height: 100%;
+  width: 100%;
+  padding: 20px 50px; }
+
+#map {
+  height: 400px;
+  width: 100%;
+  border: 20px solid #eff; }
+
+.doctor-list {
+  margin: 40px 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #eff; }
+
+.doctor-item {
+  margin: 0;
+  padding: 5px;
+  width: 33.333%;
+  float: left;
+  cursor: pointer;
+  transition: background-color 0.5s ease; }
+
+.doctor-item:hover {
+  background-color: #eef; }
+
+.doctor-item > div {
+  float: left;
+  vertical-align: top; }
+
+.doctor-pic {
+  width: 100px;
+  height: 100px; }
+
+.doctor-details {
+  padding: 10px;
+  color: #333; }
+
+.doctor-item.selected {
+  background-color: #dddfff; }
+
+.footer {
+  font-size: 9px;
+  padding: 10px;
+  margin: 0;
+  background-color: #eff;
+  text-align: right; }
+
+/*# sourceMappingURL=styles.css.map */
