@@ -24,15 +24,17 @@
 	 */
 	function DoctorFinderService(doctorService) {
 		this.doctorService = doctorService;
+
+		this.doctors = [];
 	}
 
 	/**
 	 * @type {Array}
 	 */
-	DoctorFinderService.prototype.doctors = [];
+	DoctorFinderService.prototype.doctors = null;
 
 	/**
-	 * @type {null}
+	 * @type {object}
 	 */
 	DoctorFinderService.prototype.selectedDoctor = null;
 
@@ -59,7 +61,7 @@
 	 * @returns {boolean}
 	 */
 	DoctorFinderService.prototype.doctorIsSelected = function (doctor) {
-		return this.selectedDoctor && doctor.id == this.selectedDoctor.id;
+		return this.selectedDoctor && this.selectedDoctor.id == doctor.id;
 	};
 
 
